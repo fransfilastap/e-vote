@@ -94,4 +94,20 @@ class VotePolicy
     {
         //
     }
+
+    public function voting(User $user, Vote $vote)
+    {
+        dd('test');
+        if (Carbon::now()->between($vote->start_time, $vote->end_time))
+            return true;
+        return false;
+    }
+
+    public function viewResult(User $user, Vote $vote)
+    {
+        dd('test');
+        if (Carbon::now()->isAfter($vote->end_time))
+            return true;
+        return false;
+    }
 }

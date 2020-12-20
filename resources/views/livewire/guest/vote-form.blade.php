@@ -1,7 +1,7 @@
 <div class="p-2 sm:w-1/4">
     <div class="px-6 py-8 text-center bg-white rounded-lg shadow-lg">
         <div class="mb-3">
-            <img class="w-auto mx-auto rounded-full" src="{{ asset($voteOption->photos) }}" alt="" />
+            <img class="w-auto mx-auto rounded-full" src="{{ $voteOption->photos }}" alt="" />
         </div>
         <h2 class="text-xl font-medium text-gray-700">{{ $voteOption->label }}</h2>
         <span class="block mb-5 text-blue-500">{{ $voteOption->attribute_1 }}</span>

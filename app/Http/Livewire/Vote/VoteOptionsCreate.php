@@ -5,6 +5,7 @@ namespace App\Http\Livewire\Vote;
 use App\Actions\Business\VoteOption\CreateOption;
 use App\Http\Livewire\SweetAlertDispatcher;
 use App\Models\Vote;
+use CloudinaryLabs\CloudinaryLaravel\Facades\Cloudinary;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 
@@ -25,7 +26,7 @@ class VoteOptionsCreate extends Component
         'optionCreating' => 'handle'
     ];
 
-    public $rules = ['label' => 'required', 'desc' => 'required', 'photo' => 'image|max:1024'];
+    public $rules = ['label' => 'required', 'desc' => 'required', 'photo' => 'image'];
 
     public function render()
     {
@@ -36,7 +37,7 @@ class VoteOptionsCreate extends Component
     {
         $this->validate();
 
-        $path = $this->photo->store('public');
+        $uploadedFileUrl = Cloudinary::upload($this->photo->getRealPath())->getSecurePath();
 
         $createOption->create([
             'label' => $this->label,
@@ -44,7 +45,7 @@ class VoteOptionsCreate extends Component
             'atribute_1' => '-',
             'atribute_2' => '-',
             'atribute_3' => '-',
-            'photos' => $path,
+            'photos' => $uploadedFileUrl,
             'vote_id' => $this->vote->id
         ]);
 

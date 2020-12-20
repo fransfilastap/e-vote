@@ -4,7 +4,7 @@
     <div class="w-full p-4 bg-white rounded shadow lg:w-1/2 xl:w-1/3">
         <div class="flex flex-row">
             <div class="w-16 h-16 rounded-full">
-                <img class="object-cover rounded-full" src="{{ asset($options->photos) }}"/>
+                <img class="object-cover rounded-full" src="{{ $options->photos }}"/>
             </div>
             <div class="flex-auto p-2">
                 <div class="flex flex-col">

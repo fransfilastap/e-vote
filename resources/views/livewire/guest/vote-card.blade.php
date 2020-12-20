@@ -8,13 +8,14 @@
                 class="block text-xs text-blue-400 uppercase">{{ $isrunning }} </span>
         </div>
         <div class="w-1/3">
-            @can('view',[\App\Models\Vote::class, $vote])
+            @if(Carbon\Carbon::now()->between($vote->start_time, $vote->end_time))
             <a href="{{ route('vote-form', ['vote' => $vote->uuid]) }}"
                 class="float-right px-2 py-1 text-xs text-white bg-blue-400 rounded">Pilih</a>
-            @else
+            @endif
+           @if(Carbon\Carbon::now()->isAfter($vote->end_time))
             <a href="{{ route('vote-result', ['vote' => $vote->uuid]) }}"
                 class="float-right px-2 py-1 text-xs text-white bg-blue-400 rounded">Hasil</a>
-            @endcan
+            @endif
         </div>
     </div>
     <div class="flex">
