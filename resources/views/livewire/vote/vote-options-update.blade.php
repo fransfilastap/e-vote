@@ -47,6 +47,9 @@
                             @enderror
                         </div>
                     </div>
+                    <div wire:loading>
+                        <p>Mohon menunggu...</p>
+                    </div>
             </div>
         </x-slot>
         <x-slot name="footer">

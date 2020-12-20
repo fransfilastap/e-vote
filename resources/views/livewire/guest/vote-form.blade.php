@@ -1,7 +1,8 @@
 <div class="p-2 sm:w-1/4">
     <div class="px-6 py-8 text-center bg-white rounded-lg shadow-lg">
         <div class="mb-3">
-            <img class="w-auto mx-auto rounded-full" src="{{ $voteOption->photos }}" alt="" />
+            <img class="w-64 h-64 mx-auto rounded-full" src="{{ $voteOption->photos }}" alt=""
+                style="background-size: cover; background-position: bottom center;" />
         </div>
         <h2 class="text-xl font-medium text-gray-700">{{ $voteOption->label }}</h2>
         <span class="block mb-5 text-blue-500">{{ $voteOption->attribute_1 }}</span>
