@@ -71,7 +71,7 @@
                                                     </svg>
                                                     <span class="ml-1">Options</span>
                                                 </a>
-                                                <button wire:click="requestUpdate({{ $vote->id }})"
+                                                <a href="{{ route('vote-voters', [$vote->uuid]) }}"
                                                     class="inline-flex items-center px-1 py-1 text-xs font-bold text-white bg-teal-600 rounded hover:bg-teal-700">
                                                     <svg class="w-4 h-4" fill="none" stroke="currentColor"
                                                         viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -81,7 +81,7 @@
                                                         </path>
                                                     </svg>
                                                     <span class="ml-1">Voters</span>
-                                                </button>
+                                                </a>
                                                 <button wire:click="requestUpdate({{ $vote->id }})"
                                                     class="inline-flex items-center px-1 py-1 text-xs font-bold text-white bg-indigo-600 rounded hover:bg-indigo-700">
                                                     <svg class="icon line" width="16" height="16" id="file-edit"
