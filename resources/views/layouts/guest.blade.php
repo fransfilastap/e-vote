@@ -28,13 +28,13 @@
 
 </head>
 
-<body class="bg-gray-50">
+<body class="bg-gray-100">
     <div class="font-sans antialiased text-gray-900">
         {{ $slot }}
     </div>
 
-    <footer class="flex flex-col items-center">
-        <p class="text-xs text-gray-500">Baked with ❤️ by Data dan Informasi</p>
+    <footer class="flex flex-col items-center py-2">
+        <p class="text-sm text-gray-500">Baked with ❤️ by Datin PPL</p>
     </footer>
     @stack('modals')
 
