@@ -5,7 +5,7 @@
                 style="background-size: cover; background-position: bottom center;" />
         </div>
         <h2 class="text-xl font-medium text-gray-700">{{ $voteOption->label }}</h2>
-        <span class="block mb-5 text-blue-500">{{ $voteOption->attribute_1 }}</span>
+        <p class="block mb-5 text-blue-500">{{ $voteOption->description }}</p>
 
         <a href="#" wire:click="voting()" class="px-4 py-2 text-white bg-blue-500 rounded-full">Vote</a>
     </div>
