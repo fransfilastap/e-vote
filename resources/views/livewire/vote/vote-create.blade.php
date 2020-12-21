@@ -58,11 +58,13 @@
                     },
 
                     getDateValue(date) {
-                        console.log(date)
                         let selectedDate = new Date(this.year, this.month, date);
                         this.datepickerValue = selectedDate.toDateString();
 
-                        this.$refs.date.value = selectedDate.getFullYear() + '-' + ('0' + selectedDate.getMonth()).slice(-
+                        console.log(selectedDate);
+                        let _month = 1+selectedDate.getMonth()
+
+                        this.$refs.date.value = selectedDate.getFullYear() + '-' + ('0' + _month).slice(-
                             2) + '-' + ('0' + selectedDate.getDate()).slice(-2);
 
                         console.log(this.$refs.date.value);
@@ -218,8 +220,9 @@
                         console.log(date)
                         let selectedDate = new Date(this.year, this.month, date);
                         this.datepickerValue = selectedDate.toDateString();
+                        let _month = 1 + selectedDate.getMonth()
 
-                        this.$refs.date.value = selectedDate.getFullYear() + '-' + ('0' + selectedDate.getMonth()).slice(-
+                        this.$refs.date.value = selectedDate.getFullYear() + '-' + ('0' + _month).slice(-
                             2) + '-' + ('0' + selectedDate.getDate()).slice(-2);
                         @this.set('endDate',this.$refs.date.value);
                         console.log(this.$refs.date.value);
