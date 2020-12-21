@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="https://res.cloudinary.com/dyduzvx5b/raw/upload/v1608472361/app_g3ozkj.css">
+    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.3/dist/alpine.js" defer></script>
 
@@ -29,11 +29,11 @@
 </head>
 
 <body class="bg-gray-100">
-    <div class="font-sans antialiased text-gray-900">
+    <div class="font-sans antialiased">
         {{ $slot }}
     </div>
 
-    <footer class="flex flex-col items-center py-2">
+    <footer class="flex flex-col items-center w-full py-2">
         <p class="text-sm text-gray-500">Baked with ❤️ by Datin PPL</p>
     </footer>
     @stack('modals')

@@ -35,9 +35,9 @@ class VoteIndex extends Component
         $this->deleting = true;
     }
 
-    public function requestUpdate()
+    public function requestUpdate(Vote $vote)
     {
-        $this->emit('requestUpdating');
+        $this->emit('requestUpdating', $vote);
     }
 
     public function handleUpdate()

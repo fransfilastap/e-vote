@@ -82,7 +82,7 @@
                                                     </svg>
                                                     <span class="ml-1">Voters</span>
                                                 </a>
-                                                <button wire:click="requestUpdate({{ $vote->id }})"
+                                                <button wire:click="requestUpdate({{ $vote }})"
                                                     class="inline-flex items-center px-1 py-1 text-xs font-bold text-white bg-indigo-600 rounded hover:bg-indigo-700">
                                                     <svg class="icon line" width="16" height="16" id="file-edit"
                                                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -97,7 +97,7 @@
                                                     </svg>
                                                     <span class="ml-1">Edit</span>
                                                 </button>
-                                                <button wire:click='requestDelete({{ $vote->id }})'
+                                                <button wire:click='requestDelete({{ $vote }})'
                                                     class="inline-flex items-center px-1 py-1 text-xs font-bold text-white bg-red-500 rounded hover:bg-red-600">
                                                     <svg class="icon line" width="16" height="16" id="file-remove"
                                                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -122,6 +122,7 @@
                             {{ $votes->links() }}
                         </div>
                         <livewire:vote.vote-create />
+                        <livewire:vote.vote-update />
                     </div>
                 </div>
             </div>

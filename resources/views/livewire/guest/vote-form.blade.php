@@ -1,12 +1,20 @@
-<div class="p-2 sm:w-1/4">
-    <div class="px-6 py-8 text-center bg-white rounded-lg shadow-lg">
-        <div class="mb-3">
-            <img class="w-64 h-64 mx-auto rounded-full" src="{{ $voteOption->photos }}" alt=""
-                style="background-size: cover; background-position: bottom center;" />
+<div class="w-full">
+    <div
+        class="relative overflow-hidden transition duration-500 ease-in-out transform bg-white rounded-lg shadow hover:-translate-y-1 hover:shadow-lg">
+        <img class="object-cover object-center w-full h-56" src="{{ $voteOption->photos }}" alt="">
+        <div class="h-auto p-4 md:h-40 lg:h-48">
+            <a href="#"
+                class="block mb-2 text-lg font-semibold text-blue-500 hover:text-blue-600 md:text-base lg:text-lg">
+                {{ $voteOption->label }}
+            </a>
+            <div class="block text-sm leading-relaxed text-gray-600 md:text-xs lg:text-sm">
+                {{ $voteOption->description }}
+            </div>
+            <div class="relative bottom-0 mt-2 mb-4 lg:absolute md:hidden lg:block">
+                <a href="#" wire:click.prevent="voting()"
+                    class="inline px-2 py-1 text-xs font-bold text-white bg-green-500 rounded-full hover:bg-green-700"
+                    href="#">#VoteMe</a>
+            </div>
         </div>
-        <h2 class="text-xl font-medium text-gray-700">{{ $voteOption->label }}</h2>
-        <p class="block mb-5 text-blue-500">{{ $voteOption->description }}</p>
-
-        <a href="#" wire:click="voting()" class="px-4 py-2 text-white bg-blue-500 rounded-full">Vote</a>
     </div>
 </div>
