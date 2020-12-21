@@ -27,4 +27,9 @@ class VoteForm extends Component
     {
         $this->emit('verifyVoter', [$this->voteOption]);
     }
+
+    public function readmore()
+    {
+        $this->emit('requestReading', $this->voteOption->description);
+    }
 }

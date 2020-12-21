@@ -10,4 +10,5 @@
         </div>
     </div>
     <livewire:guest.vote-verify />
+    <livewire:guest.vote-option-readmore />
 </main>

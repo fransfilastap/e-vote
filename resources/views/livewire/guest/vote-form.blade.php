@@ -7,8 +7,12 @@
                 class="block mb-2 text-lg font-semibold text-blue-500 hover:text-blue-600 md:text-base lg:text-lg">
                 {{ $voteOption->label }}
             </a>
-            <div class="block text-sm leading-relaxed text-gray-600 md:text-xs lg:text-sm">
-                {{ $voteOption->description }}
+            <div class="block text-sm leading-relaxed text-gray-600 md:text-xs lg:text-xs md:break-normal">
+                {{ Str::of($voteOption->description)->limit(50) }}
+                @if (strlen($voteOption->description) > 50)
+                    ... <a wire:click="readmore"
+                        class="text-blue-500 cursor-pointer hover:text-blue-700 hover:underline">Selengkapnya</a>
+                @endif
             </div>
             <div class="relative bottom-0 mt-2 mb-4 lg:absolute md:hidden lg:block">
                 <a href="#" wire:click.prevent="voting()"
