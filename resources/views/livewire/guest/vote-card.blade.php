@@ -10,11 +10,11 @@
         <div class="w-1/3">
             @if(Carbon\Carbon::now()->between($vote->start_time, $vote->end_time))
             <a href="{{ route('vote-form', ['vote' => $vote->uuid]) }}"
-                class="float-right px-2 py-1 text-xs text-white bg-blue-400 rounded">Pilih</a>
+                class="float-right px-2 py-1 text-xs text-white bg-blue-600 rounded">Pilih</a>
             @endif
            @if(Carbon\Carbon::now()->isAfter($vote->end_time))
             <a href="{{ route('vote-result', ['vote' => $vote->uuid]) }}"
-                class="float-right px-2 py-1 text-xs text-white bg-blue-400 rounded">Hasil</a>
+                class="float-right px-2 py-1 text-xs text-white bg-blue-600 rounded">Hasil</a>
             @endif
         </div>
     </div>
