@@ -16,7 +16,7 @@
             </div>
             <div class="relative bottom-0 mt-2 mb-4 lg:absolute md:hidden lg:block">
                 <a href="#" wire:click.prevent="voting()"
-                    class="inline px-2 py-1 text-xs font-bold text-white bg-green-500 rounded-full hover:bg-green-700"
+                    class="items-center inline px-2 py-1 text-xs font-bold text-white bg-green-500 rounded-full hover:bg-green-700"
                     href="#">#VoteMe</a>
             </div>
         </div>

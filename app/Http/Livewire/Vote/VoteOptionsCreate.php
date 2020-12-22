@@ -37,14 +37,7 @@ class VoteOptionsCreate extends Component
     {
         $this->validate();
 
-        $uploadedFileUrl = Cloudinary::upload($this->photo->getRealPath(), [
-            'transformation' => [
-                'gravity' => 'auto',
-                'width' => 300,
-                'height' => 300,
-                'crop' => 'crop'
-            ]
-        ])->getSecurePath();
+        $uploadedFileUrl = Cloudinary::upload($this->photo->getRealPath())->getSecurePath();
 
         $createOption->create([
             'label' => $this->label,
