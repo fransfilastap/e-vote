@@ -8,8 +8,8 @@
                 {{ $voteOption->label }}
             </a>
             <div class="block text-sm leading-relaxed text-gray-600 md:text-xs lg:text-xs md:break-normal">
-                {{ Str::of($voteOption->description)->limit(150) }}
-                @if (strlen($voteOption->description) > 150)
+                {{ Str::of($voteOption->description)->limit(100) }}
+                @if (strlen($voteOption->description) > 100)
                     <a wire:click="readmore"
                         class="text-blue-500 cursor-pointer hover:text-blue-700 hover:underline">Selengkapnya</a>
                 @endif
