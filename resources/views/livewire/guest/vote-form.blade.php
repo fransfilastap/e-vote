@@ -2,7 +2,7 @@
     <div
         class="relative overflow-hidden transition duration-500 ease-in-out transform bg-white rounded-lg shadow hover:-translate-y-1 hover:shadow-lg">
         <img class="object-cover object-center w-full h-56" src="{{ $voteOption->photos }}" alt="">
-        <div class="h-auto p-4 md:h-40 lg:h-48">
+        <div class="h-40 p-4 lg:h-48">
             <a href="#"
                 class="block mb-2 text-lg font-semibold text-blue-500 hover:text-blue-600 md:text-base lg:text-lg">
                 {{ $voteOption->label }}
