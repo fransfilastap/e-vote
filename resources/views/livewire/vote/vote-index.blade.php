@@ -61,6 +61,16 @@
                                         </td>
                                         <td class="px-5 py-5 text-sm bg-gray-100 border-b border-l border-gray-200">
                                             <div class="flex flex-col space-y-2">
+                                                <a href="{{ route('vote-result', [$vote->uuid]) }}" target="_blank"
+                                                    class="inline-flex items-center px-1 py-1 text-xs font-bold text-white bg-indigo-600 rounded hover:bg-yellow-700">
+                                                    <svg class="w-4 h-4" fill="none" stroke="currentColor"
+                                                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16">
+                                                        </path>
+                                                    </svg>
+                                                    <span class="ml-1">Result</span>
+                                                </a>
                                                 <a href="{{ route('vote-options', [$vote->uuid]) }}"
                                                     class="inline-flex items-center px-1 py-1 text-xs font-bold text-white bg-yellow-400 rounded hover:bg-yellow-700">
                                                     <svg class="w-4 h-4" fill="none" stroke="currentColor"
