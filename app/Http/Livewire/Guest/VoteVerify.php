@@ -44,7 +44,7 @@ class VoteVerify extends Component
         if ($result instanceof Voter) {
             $submitBallot->submit($this->voteOption, $result);
 
-            $this->dispatchSwal('Vote Success', 'Vote submited', 'success');
+            $this->dispatchSwal('Vote Submited', 'Thank you ' . $result->name, 'success');
             $this->verify = false;
         } else {
             if ($result === 0) {
