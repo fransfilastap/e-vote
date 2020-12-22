@@ -51,12 +51,14 @@
                                             </p>
                                         </td>
                                         <td class="px-5 py-5 text-sm bg-white border-b border-gray-200">
-                                            <p class="text-gray-900 whitespace-no-wrap">{{ __($vote->start_time) }}
+                                            <p class="text-gray-900 whitespace-no-wrap">
+                                                {{ __($vote->start_time->toDateString()) }}
                                             </p>
                                         </td>
 
                                         <td class="px-5 py-5 text-sm bg-white border-b border-gray-200">
-                                            <p class="text-gray-900 whitespace-no-wrap">{{ __($vote->end_time) }}
+                                            <p class="text-gray-900 whitespace-no-wrap">
+                                                {{ __($vote->end_time->toDateString()) }}
                                             </p>
                                         </td>
                                         <td class="px-5 py-5 text-sm bg-gray-100 border-b border-l border-gray-200">

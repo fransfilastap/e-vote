@@ -13,15 +13,17 @@ class VoteCard extends Component
 
     public Vote $vote;
     public $isrunning;
+    public $isallowed = false;
 
     public function mount(Vote $vote)
     {
 
         $this->vote = $vote;
 
-        if (Carbon::now()->between($this->vote->start_time, $this->vote->end_time))
+        if (Carbon::now()->between($this->vote->start_time, $this->vote->end_time)) {
             $this->isrunning = "Berlangsung";
-        else {
+            $this->isallowed = true;
+        } else {
             if (Carbon::now()->isBefore($this->vote->start_time))
                 $this->isrunning = "Belum dimulai";
             if (Carbon::now()->isAfter($this->vote->end_time))

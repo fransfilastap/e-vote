@@ -8,8 +8,10 @@
                 class="block text-xs text-blue-400 uppercase">{{ $isrunning }} </span>
         </div>
         <div class="w-1/3">
+            @if ($isallowed)
             <a href="{{ route('vote-form', ['vote' => $vote->uuid]) }}"
                 class="float-right px-2 py-1 text-xs text-white bg-blue-600 rounded">Pilih</a>
+            @endif
            @if(Carbon\Carbon::now()->isAfter($vote->end_time))
             <a href="{{ route('vote-result', ['vote' => $vote->uuid]) }}"
                 class="float-right px-2 py-1 text-xs text-white bg-blue-600 rounded">Hasil</a>

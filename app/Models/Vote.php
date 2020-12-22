@@ -12,7 +12,7 @@ class Vote extends Model
 
     protected $fillable = ['vote_name', 'uuid', 'is_enabled', 'start_time', 'end_time'];
 
-    protected $date = [
+    protected $dates = [
         'start_time',
         'end_time',
     ];

@@ -5,6 +5,7 @@ namespace App\Http\Livewire\Guest;
 use App\Http\Livewire\SweetAlertDispatcher;
 use App\Models\Vote;
 use App\Models\VoteOption;
+use Carbon\Carbon;
 use Livewire\Component;
 
 class VoteForm extends Component
@@ -16,6 +17,10 @@ class VoteForm extends Component
     public function mount(VoteOption $voteOption)
     {
         $this->voteOption = $voteOption;
+
+        if (!Carbon::now()->between($voteOption->vote->start_time, $voteOption->vote->end_time)) {
+            abort('403');
+        }
     }
 
     public function render()
