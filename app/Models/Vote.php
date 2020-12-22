@@ -31,4 +31,9 @@ class Vote extends Model
     {
         return $this->hasMany(Voter::class)->where('vote_count', '>', 0);
     }
+
+    public function ballots()
+    {
+        return $this->hasMany(VoteBallot::class);
+    }
 }

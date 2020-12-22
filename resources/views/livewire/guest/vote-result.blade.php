@@ -12,13 +12,13 @@
                     <div class="flex mt-3">
                         <span class="py-1 text-xs font-semibold">Dipilih</span>
                         <span
-                            class="py-1 ml-auto text-xs font-semibold text-blue-600">{{ number_format(((count($options->voted)/count($vote->voters))*100),2).'%' }}</span>
+                            class="py-1 ml-auto text-xs font-semibold text-blue-600">{{ number_format(((count($options->voted)/count($vote->ballots))*100),2).'%' }}</span>
                     </div>
                     <div class="flex">
-                        <div class="h-2 bg-blue-400 rounded @if( (count($options->voted)/count($vote->voters))!=1) rounded-r-none @endif "
-                            style="width: {{ ((count($options->voted)/count($vote->voters))*100) }}%"></div>
+                        <div class="h-2 bg-blue-400 rounded @if( (count($options->voted)/count($vote->ballots))!=1) rounded-r-none @endif "
+                            style="width: {{ ((count($options->voted)/count($vote->ballots))*100) }}%"></div>
                         <div class="h-2 bg-blue-100 rounded rounded-l-none"
-                            style="width: {{ 100 - ((count($options->voted)/count($vote->voters))*100) }}%"></div>
+                            style="width: {{ 100 - ((count($options->voted)/count($vote->ballots))*100) }}%"></div>
                     </div>
                 </div>
             </div>
