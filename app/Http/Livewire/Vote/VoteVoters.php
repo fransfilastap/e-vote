@@ -21,8 +21,10 @@ class VoteVoters extends Component
     {
         $voters = $this->vote->voters();
 
-        if($this->voteCount)
-            $voters = $voters->where('vote_count',$this->voteCount);
+        if(isset($this->voteCount)){
+            $voters = $voters->where('vote_count','=',$this->voteCount);
+        }
+
         
 
         return view('livewire.vote.vote-voters', [
