@@ -20,6 +20,30 @@
                         {{ __('Add Voter') }}
                     </x-jet-button>
                 </div>
+                <div class="flex flex-row w-full space-x-2">
+                                    <div class="flex flex-wrap mb-2 -mx-3 mt-3">
+                        <div class="w-30 px-3">
+                            <select wire:model="perPage" class="px-2 py-1 border border-gray-500 rounded">
+                                <option>Per Halaman</option>
+                                <option value="10">10</option>
+                                <option value="20">20</option>
+                                <option value="30">30</option>
+                                <option value="40">40</option>
+                                <option value="50">50</option>
+                                
+                            </select/>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap mb-2 -mx-3 mt-3">
+                        <div class="w-30 px-3">
+                            <select wire:model="voteCount" class="px-2 py-1 border border-gray-500 rounded">
+                                <option>Sudah vote/Belum Vote</option>
+                                <option value="1">Sudah vote</option>
+                                <option value="0">Belum Vote</option>
+                            </select/>
+                        </div>
+                    </div>
+                </div>
                 <div class="mt-6 text-gray-500">
                     <div class="inline-block min-w-full overflow-hidden rounded-lg shadow">
                         <table class="min-w-full leading-normal">

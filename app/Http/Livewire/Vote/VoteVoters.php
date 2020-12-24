@@ -9,6 +9,8 @@ class VoteVoters extends Component
 {
 
     public Vote $vote;
+    public $perPage = 10;
+    public $voteCount;
 
     public function mount(Vote $vote)
     {
@@ -17,8 +19,14 @@ class VoteVoters extends Component
 
     public function render()
     {
+        $voters = $this->vote->voters();
+
+        if($this->voteCount)
+            $voters = $voters->where('vote_count',$this->voteCount);
+        
+
         return view('livewire.vote.vote-voters', [
-            'voters' => $this->vote->voters()->paginate(5)
+            'voters' => $voters->paginate($this->perPage)
         ]);
     }
 }

@@ -1,4 +1,4 @@
-<div class="w-full">
+<div class="w-full md:w-60 lg:w-60">
     <div
         class="relative overflow-hidden transition duration-500 ease-in-out transform bg-white rounded-lg shadow hover:-translate-y-1 hover:shadow-lg">
         <img class="object-cover object-center w-full h-56" src="{{ $voteOption->photos }}" alt="">
